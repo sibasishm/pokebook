@@ -8,7 +8,7 @@ import Details from './components/Details';
 import NotFound from './components/NotFound';
 
 const App = (
-    <Router>
+    <Router basename="/pokebook" >
         <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/details/:id" component={Details} />

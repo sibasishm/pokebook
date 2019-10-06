@@ -10,7 +10,7 @@ class PokeCard extends React.Component {
     componentDidMount() {
         const { pokeId } = this.state;
         axios
-            .get(`/pokemon/${pokeId}`)
+            .get(`https://pokeapi.co/api/v2/pokemon/${pokeId}`)
             .then(res => {
                 let types = [];
                 if (res.hasOwnProperty('data') && res.data.hasOwnProperty('types')) {
@@ -38,7 +38,7 @@ class PokeCard extends React.Component {
                         <div className="card-title">{name}</div>
                         <div className="card-subtitle">{types.join(', ')}</div>
                     </div>
-                    <a href={`/details/${pokeId}`} className="btn btn-danger">View details</a>
+                    <a href={`/pokebook/details/${pokeId}`} className="btn btn-danger">View details</a>
                 </div>
             </li>
         )

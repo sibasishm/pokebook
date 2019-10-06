@@ -15,7 +15,7 @@ class CardHolder extends React.Component {
     componentDidMount() {
         const { offset, limit } = this.state;
         axios
-            .get(`/pokemon?offset=${offset}&limit=${limit}`)
+            .get(`https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`)
             .then(res => this.setState({ results: res.data.results, totalPokemons: res.data.count }))
             .catch(err => console.log("Error occured while fetching data :: " + err));
         this.setState({ offset: offset + limit })
@@ -25,7 +25,7 @@ class CardHolder extends React.Component {
         const { offset, limit, results } = this.state;
         this.setState({ offset: offset + limit })
         axios
-            .get(`/pokemon?offset=${offset}&limit=${limit}`)
+            .get(`https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`)
             .then(res => this.setState({ results: results.concat(res.data.results) }))
             .catch(err => console.log("Error occured while fetching data :: " + err))
     }

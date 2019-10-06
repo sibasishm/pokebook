@@ -15,7 +15,7 @@ class Details extends React.Component {
     componentDidMount() {
         const { pokeId } = this.state;
         axios
-            .get(`/pokemon/${pokeId}`)
+            .get(`https://pokeapi.co/api/v2/pokemon/${pokeId}`)
             .then(res => {
                 const pokemonDetails = {
                     name: res.data.name,
@@ -34,7 +34,7 @@ class Details extends React.Component {
                 console.log("Error occured while fetching pokemon data :: " + err + " :: for pokeId :: " + pokeId)
             })
         axios
-            .get(`/pokemon-species/${pokeId}`)
+            .get(`https://pokeapi.co/api/v2/pokemon-species/${pokeId}`)
             .then(res => {
                 const speciesDetails = {
                     evolutionChainUrl: res.data.evolution_chain.url
@@ -74,11 +74,11 @@ class Details extends React.Component {
             return (
                 <div className="container-2 details">
                     <div className="details-header">
-                        <a href={`/details/${this.state.pokeId - 1}`} className="btn btn-light hide-sm">Previous</a>
+                        <a href={`/pokebook/details/${this.state.pokeId - 1}`} className="btn btn-light hide-sm">Previous</a>
                         <h3 className="x-large text-capitalize">
                             {name}
                         </h3>
-                        <a href={`/details/${this.state.pokeId + 1}`} className="btn btn-light hide-sm">Next</a>
+                        <a href={`/pokebook/details/${this.state.pokeId + 1}`} className="btn btn-light hide-sm">Next</a>
                     </div>
                     <img src={imgUrl} alt="pokemon" />
                     <div className="details-desc">
