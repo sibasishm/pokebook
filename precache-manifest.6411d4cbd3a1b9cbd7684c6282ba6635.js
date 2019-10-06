@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6b64e8d1111c4df3cf69abcefcb81cc6",
+    "revision": "785c856f8593085427ffeebb940b487e",
     "url": "/pokebook/index.html"
   },
   {
-    "revision": "93dbfab9bdf2073be70c",
+    "revision": "42e7fa8f37a194a9802e",
     "url": "/pokebook/static/css/main.17a3437f.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/pokebook/static/js/2.81cd896c.chunk.js"
   },
   {
-    "revision": "93dbfab9bdf2073be70c",
-    "url": "/pokebook/static/js/main.0d372ae5.chunk.js"
+    "revision": "42e7fa8f37a194a9802e",
+    "url": "/pokebook/static/js/main.bb9e68d5.chunk.js"
   },
   {
     "revision": "67eb2f5f2236d0231e7c",
