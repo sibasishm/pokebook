@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Sibasish19/pokebook/static/css/main.9ffe4d76.chunk.css",
-    "main.js": "/Sibasish19/pokebook/static/js/main.0d372ae5.chunk.js",
-    "main.js.map": "/Sibasish19/pokebook/static/js/main.0d372ae5.chunk.js.map",
-    "runtime-main.js": "/Sibasish19/pokebook/static/js/runtime-main.1a6faf98.js",
-    "runtime-main.js.map": "/Sibasish19/pokebook/static/js/runtime-main.1a6faf98.js.map",
-    "static/js/2.81cd896c.chunk.js": "/Sibasish19/pokebook/static/js/2.81cd896c.chunk.js",
-    "static/js/2.81cd896c.chunk.js.map": "/Sibasish19/pokebook/static/js/2.81cd896c.chunk.js.map",
-    "index.html": "/Sibasish19/pokebook/index.html",
-    "precache-manifest.d86db45e0eac37b5c713b4616a216c60.js": "/Sibasish19/pokebook/precache-manifest.d86db45e0eac37b5c713b4616a216c60.js",
-    "service-worker.js": "/Sibasish19/pokebook/service-worker.js",
-    "static/css/main.9ffe4d76.chunk.css.map": "/Sibasish19/pokebook/static/css/main.9ffe4d76.chunk.css.map",
-    "static/media/style.min.css": "/Sibasish19/pokebook/static/media/hero-image.37ba67e4.jpg"
+    "main.css": "/pokebook/static/css/main.17a3437f.chunk.css",
+    "main.js": "/pokebook/static/js/main.0d372ae5.chunk.js",
+    "main.js.map": "/pokebook/static/js/main.0d372ae5.chunk.js.map",
+    "runtime-main.js": "/pokebook/static/js/runtime-main.758c8f3b.js",
+    "runtime-main.js.map": "/pokebook/static/js/runtime-main.758c8f3b.js.map",
+    "static/js/2.81cd896c.chunk.js": "/pokebook/static/js/2.81cd896c.chunk.js",
+    "static/js/2.81cd896c.chunk.js.map": "/pokebook/static/js/2.81cd896c.chunk.js.map",
+    "index.html": "/pokebook/index.html",
+    "precache-manifest.99c4980f14c756b0c4445ced708216a5.js": "/pokebook/precache-manifest.99c4980f14c756b0c4445ced708216a5.js",
+    "service-worker.js": "/pokebook/service-worker.js",
+    "static/css/main.17a3437f.chunk.css.map": "/pokebook/static/css/main.17a3437f.chunk.css.map",
+    "static/media/style.min.css": "/pokebook/static/media/hero-image.37ba67e4.jpg"
   }
 }
