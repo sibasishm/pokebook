@@ -1,0 +1,165 @@
+// Container
+.container {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 1rem;
+    overflow: hidden;
+}
+
+.container-2 {
+    max-width: $max-width2;
+    background-color: $white-color;
+    margin: 1rem auto;
+    padding: 2rem;
+    overflow: hidden;
+}
+
+// Typography
+.x-large {
+    font-size: 3.5rem;
+    letter-spacing: 0.1rem;
+    font-weight: 700;
+}
+
+.large {
+    font-size: 2rem;
+}
+
+.lead {
+    font-size: 1.25rem;
+}
+
+.text-primary {
+    color: $primary-color;
+}
+
+.text-grey {
+    color: $text-color;
+}
+
+.text-capitalize {
+    text-transform: capitalize
+}
+
+.text-justify {
+    text-align: justify
+}
+
+.text-key {
+    font-size: 1.5rem;
+}
+
+.text-subkey {
+    color: $light-color;
+    text-transform: capitalize;
+}
+
+.text-value {
+    color: $text-color;
+    text-transform: capitalize;
+}
+
+.round-img {
+    border-radius: 50%;
+}
+
+.line {
+    height: 1px;
+    background: #ccc;
+    margin: 1.5rem 0;
+}
+
+// Buttons
+.btn {
+    display: inline-block;
+    width: fit-content;
+    background: $light-color;
+    color: $text-color;
+    text-transform: uppercase;
+    padding: 0.5rem 1.5rem;
+    margin: 0 2rem;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    font-size: 1rem;
+    outline: none;
+    transition: all 100ms ease-in;
+
+    &.btn-primary {
+        @include set-background($primary-color);
+
+        &:hover,
+        &:focus {
+            background: darken($primary-color, 10%);
+            transform: translateY(2px);
+        }
+    }
+
+    &.btn-dark {
+        @include set-background($dark-color);
+
+        &:hover,
+        &:focus {
+            background: darken($dark-color, 10%);
+            transform: translateY(2px);
+        }
+    }
+
+    &.btn-success {
+        @include set-background($success-color);
+
+        &:hover,
+        &:focus {
+            background: darken($success-color, 10%);
+            transform: translateY(2px);
+        }
+    }
+
+    &.btn-danger {
+        @include set-background($danger-color);
+
+        &:hover,
+        &:focus {
+            background: darken($danger-color, 10%);
+            transform: translateY(2px);
+        }
+    }
+
+    &.btn-light {
+        @include set-background($light-color);
+
+        &:hover,
+        &:focus {
+            background: darken($light-color, 10%);
+            transform: translateY(2px);
+        }
+    }
+}
+
+// Progress Bar
+.progress-bar {
+    height: 1.5rem;
+    position: relative;
+    background: rgba($dark-color, 0.8);
+    border-radius: 2rem;
+    padding: 0.3rem 0.4rem;
+    margin: 0.25rem;
+    box-shadow: inset 0 -1px 1px rgba($white-color, 0.3);
+
+    >span {
+        display: block;
+        height: 100%;
+        border-top-right-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+        border-top-left-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+        background-image: linear-gradient(to left,
+                rgba($primary-color, 0.75),
+                rgba($primary-color, 1));
+        box-shadow:
+            inset 0 2px 9px rgba($white-color, 0.3),
+            inset 0 -2px 6px rgba($dark-color, 0.4);
+        position: relative;
+        overflow: hidden;
+    }
+}
