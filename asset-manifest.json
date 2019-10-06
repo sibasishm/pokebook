@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/pokebook/static/css/main.17a3437f.chunk.css",
-    "main.js": "/pokebook/static/js/main.621efde7.chunk.js",
-    "main.js.map": "/pokebook/static/js/main.621efde7.chunk.js.map",
+    "main.js": "/pokebook/static/js/main.84163d4d.chunk.js",
+    "main.js.map": "/pokebook/static/js/main.84163d4d.chunk.js.map",
     "runtime-main.js": "/pokebook/static/js/runtime-main.758c8f3b.js",
     "runtime-main.js.map": "/pokebook/static/js/runtime-main.758c8f3b.js.map",
     "static/js/2.4231656c.chunk.js": "/pokebook/static/js/2.4231656c.chunk.js",
     "static/js/2.4231656c.chunk.js.map": "/pokebook/static/js/2.4231656c.chunk.js.map",
     "index.html": "/pokebook/index.html",
-    "precache-manifest.0fdb30e66b117e6f209c89bf6707d098.js": "/pokebook/precache-manifest.0fdb30e66b117e6f209c89bf6707d098.js",
+    "precache-manifest.25d68454e2639ea90fc920d0a6250b85.js": "/pokebook/precache-manifest.25d68454e2639ea90fc920d0a6250b85.js",
     "service-worker.js": "/pokebook/service-worker.js",
     "static/css/main.17a3437f.chunk.css.map": "/pokebook/static/css/main.17a3437f.chunk.css.map",
     "static/media/style.min.css": "/pokebook/static/media/hero-image.37ba67e4.jpg"
