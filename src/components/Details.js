@@ -1,5 +1,7 @@
 import React from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
+
 import NotFound from './NotFound';
 // import TypesContainer from './TypesContainer';
 // import EvolutionContainer from './EvolutionContainer';
@@ -14,6 +16,52 @@ class Details extends React.Component {
 
     componentDidMount() {
         const { pokeId } = this.state;
+        axios
+            .get(`https://pokeapi.co/api/v2/pokemon/${pokeId}`)
+            .then(res => {
+                const pokemonDetails = {
+                    name: res.data.name,
+                    height: (res.data.height / 10).toFixed(2) + ' M',
+                    weight: (res.data.weight / 10).toFixed(2) + ' Kg',
+                    types: res.data.types.map((typeObj) => typeObj.type.name).join(', '),
+                    stats: res.data.stats.map((statsObj) => {
+                        return { name: statsObj.stat.name, value: statsObj.base_stat }
+                    }),
+                    abilities: res.data.abilities.map(abilityObj => abilityObj.ability.name).join(', ')
+                }
+                this.setState({ pokemonDetails: pokemonDetails });
+            })
+            .catch(err => {
+                this.setState({ errorFlag: true });
+                console.log("Error occured while fetching pokemon data :: " + err + " :: for pokeId :: " + pokeId)
+            })
+        axios
+            .get(`https://pokeapi.co/api/v2/pokemon-species/${pokeId}`)
+            .then(res => {
+                const speciesDetails = {
+                    evolutionChainUrl: res.data.evolution_chain.url
+                    ,
+                    description: (res.data.flavor_text_entries.filter(item => (item.language.name === 'en' && item.version.name === 'omega-ruby'))[0]) ? (res.data.flavor_text_entries.filter(item => (item.language.name === 'en' && item.version.name === 'omega-ruby'))[0]).flavor_text : 'NA',
+                    genus: (res.data.genera.filter(item => item.language.name === 'en')[0]) ? (res.data.genera.filter(item => item.language.name === 'en')[0]).genus.split(' ').slice(0, -1).join(' ') : 'NA ',
+                    habitat: (res.data.habitat) ? res.data.habitat.name : 'NA'
+                };
+                this.setState({ speciesDetails: speciesDetails });
+            })
+            .catch(err => {
+                this.setState({ errorFlag: true });
+                console.log("Error occured while fetching species data :: " + err + " :: for pokeId :: " + pokeId)
+            })
+
+    }
+
+    updatePokeId(updateBy) {
+        this.setState({
+            pokeId: this.state.pokeId + updateBy
+        })
+    }
+
+    componentWillReceiveProps(nextProps) {
+        const pokeId = parseInt(nextProps.match.params.id, 10) || 0;
         axios
             .get(`https://pokeapi.co/api/v2/pokemon/${pokeId}`)
             .then(res => {
@@ -74,11 +122,11 @@ class Details extends React.Component {
             return (
                 <div className="container-2 details">
                     <div className="details-header">
-                        <a href={`/pokebook/details/${this.state.pokeId - 1}`} className="btn btn-light hide-sm">Previous</a>
+                        <Link to={`/details/${this.state.pokeId - 1}`} className="btn btn-light hide-sm" onClick={() => this.updatePokeId(-1)}>Previous</Link>
                         <h3 className="x-large text-capitalize">
                             {name}
                         </h3>
-                        <a href={`/pokebook/details/${this.state.pokeId + 1}`} className="btn btn-light hide-sm">Next</a>
+                        <Link to={`/details/${this.state.pokeId + 1}`} className="btn btn-light hide-sm" onClick={() => this.updatePokeId(1)}>Next</Link>
                     </div>
                     <img src={imgUrl} alt="pokemon" />
                     <div className="details-desc">
@@ -125,7 +173,7 @@ class Details extends React.Component {
                         </ul>
                     </div>
                     <div className="details-button hide-sm">
-                        <a href="/" className="btn btn-primary">Catch 'em all</a>
+                        <Link to="/" className="btn btn-primary">Catch 'em all</Link>
                     </div>
 
                 </div>

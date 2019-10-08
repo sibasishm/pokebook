@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 class PokeCard extends React.Component {
     state = {
@@ -38,7 +39,7 @@ class PokeCard extends React.Component {
                         <div className="card-title">{name}</div>
                         <div className="card-subtitle">{types.join(', ')}</div>
                     </div>
-                    <a href={`/pokebook/details/${pokeId}`} className="btn btn-danger">View details</a>
+                    <Link to={`/details/${pokeId}`} className="btn btn-danger">View details</Link>
                 </div>
             </li>
         )
